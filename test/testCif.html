@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Standalone CIF Test (Mock API)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px dashed #555;
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .log-box {
+            font-size: 12px;
+            color: #88f;
+            margin-top: 20px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>CIF Standalone Test</h2>
+    <p>Testing a file manager using the Mock API.</p>
+
+    <button onclick="openMyManager()">Open file manager</button>
+
+    <div id="result">
+        <strong>Selected file:</strong>
+        <div id="file-info"></div>
+        <img alt="Preview" id="preview" src="">
+    </div>
+
+    <div class="log-box" id="console-mock"></div>
+</div>
+
+<script src="api-mock.js"></script>
+
+<script src="../dist/cif.js"></script>
+
+<script>
+    const INSTANCE_ID = 'standalone-demo';
+
+    function openMyManager() {
+        if (typeof cif === 'undefined') {
+            alert('Error: cif.js not loaded. Check the file path!');
+            return;
+        }
+
+        window._cifCallbacks = window._cifCallbacks || {};
+        window._cifCallbacks[INSTANCE_ID] = (path, url) => {
+            console.log('Main page received:', {path, url});
+
+            const resultBox = document.getElementById('result');
+            resultBox.style.display = 'block';
+            document.getElementById('file-info').textContent = `Path: ${path}`;
+            document.getElementById('preview').src = url;
+
+            if (window.cifClose) window.cifClose(INSTANCE_ID);
+        };
+
+        cifOpen(INSTANCE_ID, 'uploads');
+    }
+
+    const originalLog = console.log;
+    console.log = function (...args) {
+        if (args[0] && args[0].includes('[mock]')) {
+            const logBox = document.getElementById('console-mock');
+            logBox.innerHTML += `> ${args.join(' ')}<br>`;
+        }
+        originalLog.apply(console, args);
+    };
+</script>
+
+</body>
+</html>

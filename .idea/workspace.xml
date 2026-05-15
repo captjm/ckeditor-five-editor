@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b56690d-8ed0-4d01-9f2b-3ba9035bb3f7" name="Changes" comment="React version development" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;captjm&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:captjm/ckeditor-five-editor.git&quot;,
+    &quot;accountId&quot;: &quot;e29cb009-656a-4068-b608-5adb82496257&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="37D1wtLjTow96niF9ySY7UP6as4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Makefile Target.add-file-paths.executor": "Run",
+    "Makefile Target.build.executor": "Run",
+    "Makefile Target.licenses.executor": "Run",
+    "Makefile Target.serve.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "disable.download.node.interpreter.editor.notification": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "/media/wlands/WebstormProjects/ckeditor-five-build/src/cif/components",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/media/wlands/WebstormProjects/ckeditor-five-build/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/cif/components" />
+      <recent name="$PROJECT_DIR$/src/cif" />
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/js" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile Target.add-file-paths">
+    <configuration name="add-file-paths" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="add-file-paths" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="build" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="licenses" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="licenses" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="serve" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="serve" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.add-file-paths" />
+        <item itemvalue="Makefile Target.add-file-paths" />
+        <item itemvalue="Makefile Target.add-file-paths" />
+        <item itemvalue="Makefile Target.add-file-paths" />
+        <item itemvalue="Makefile Target.add-file-paths" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.23567.141" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b56690d-8ed0-4d01-9f2b-3ba9035bb3f7" name="Changes" comment="" />
+      <created>1766423071425</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766423071425</updated>
+      <workItem from="1766423072449" duration="3128000" />
+      <workItem from="1769330390444" duration="829000" />
+      <workItem from="1769331232755" duration="2709000" />
+      <workItem from="1770297521419" duration="13000" />
+      <workItem from="1770297625548" duration="1211000" />
+      <workItem from="1770298851334" duration="3907000" />
+      <workItem from="1770302950314" duration="772000" />
+      <workItem from="1770372289532" duration="9996000" />
+      <workItem from="1770457834987" duration="1330000" />
+      <workItem from="1770489002319" duration="699000" />
+      <workItem from="1770982199059" duration="4000" />
+      <workItem from="1773587083501" duration="921000" />
+      <workItem from="1774504656043" duration="6000" />
+      <workItem from="1778736876036" duration="7608000" />
+      <workItem from="1778828710117" duration="8402000" />
+      <workItem from="1778846100157" duration="17394000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add File Manager">
+      <option name="closed" value="true" />
+      <created>1778835107696</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778835107697</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add LICENSE">
+      <option name="closed" value="true" />
+      <created>1778836279890</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778836279890</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cif.js refactoring">
+      <option name="closed" value="true" />
+      <created>1778837382023</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778837382023</updated>
+    </task>
+    <task id="LOCAL-00004" summary="cif.js refactoring">
+      <option name="closed" value="true" />
+      <created>1778837420447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778837420447</updated>
+    </task>
+    <task id="LOCAL-00005" summary="migration to ts">
+      <option name="closed" value="true" />
+      <created>1778857989108</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778857989108</updated>
+    </task>
+    <task id="LOCAL-00006" summary="React version development">
+      <option name="closed" value="true" />
+      <created>1778864732245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778864732245</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/cif/types.d.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add File Manager" />
+    <MESSAGE value="Add LICENSE" />
+    <MESSAGE value="cif.js refactoring" />
+    <MESSAGE value="migration to ts" />
+    <MESSAGE value="React version development" />
+    <option name="LAST_COMMIT_MESSAGE" value="React version development" />
+  </component>
+</project>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>CaptJMCKEditor - test</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: system-ui, sans-serif;
+            background: #111;
+            color: #eee;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin: 0 0 16px;
+            color: #adf;
+        }
+
+        .cases {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 900px;
+        }
+
+        .case {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .case h2 {
+            margin: 0 0 12px;
+            font-size: 14px;
+            color: #8cf;
+        }
+
+        .ck-editor__editable {
+            min-height: 180px;
+        }
+
+        #log {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 340px;
+            max-height: 220px;
+            overflow-y: auto;
+            background: #0a0a0a;
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            font-size: 12px;
+            font-family: monospace;
+            padding: 8px;
+            color: #8f8;
+        }
+
+        #log .err {
+            color: #f88;
+        }
+
+        #log .info {
+            color: #88f;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CaptJMCKEditor build test</h1>
+
+<div class="cases">
+    <div class="case">
+        <h2>Case 1 - default uploadDir (uploads/)</h2>
+        <textarea data-cif-root="uploads" id="editor-1">
+            <p>Hello <strong>world</strong>!</p>
+        </textarea>
+    </div>
+
+    <div class="case">
+        <h2>Case 2 - custom uploadDir (uploads/articles)</h2>
+        <textarea data-cif-root="uploads/articles" id="editor-2">
+            <p>Article body goes here.</p>
+        </textarea>
+    </div>
+
+    <div class="case">
+        <h2>Output</h2>
+        <button onclick="readEditors()"
+                style="background:#25a;border:none;color:#fff;padding:6px 16px;
+                       border-radius:4px;cursor:pointer;margin-bottom:10px;">
+            Read editors HTML
+        </button>
+        <pre id="output" style="white-space:pre-wrap;font-size:12px;color:#ccc;"></pre>
+    </div>
+</div>
+
+<div id="log"><span class="info">[log ready]</span></div>
+
+<!-- -- Scripts ------------------------------------------------------------ -->
+
+<script src="api-mock.js"></script>
+
+<script src="../dist/cif.js"></script>
+
+<script src="../dist/editor.js"></script>
+
+<script>
+    function log(msg, cls) {
+        const div = document.getElementById('log');
+        const span = document.createElement('span');
+        span.className = cls || '';
+        span.textContent = '\n' + msg;
+        div.appendChild(span);
+        div.scrollTop = div.scrollHeight;
+    }
+
+    const editors = {};
+    const TOOLBAR = [
+        'heading', '|',
+        'bold', 'italic', '|',
+        'link', 'imageInsert', 'cmFileManager', '|',
+        'insertTable', '|',
+        'undo', 'redo',
+    ];
+
+    const CaptJMCKEditor = window.editor;
+
+    async function initEditors() {
+        if (typeof CaptJMCKEditor === 'undefined') {
+            log('ERROR: CaptJMCKEditor not found - check dist/editor.js path', 'err');
+            return;
+        }
+        log('CaptJMCKEditor found, initializing...', 'info');
+
+        for (const id of ['editor-1', 'editor-2']) {
+            try {
+                editors[id] = await CaptJMCKEditor.create(
+                    document.getElementById(id),
+                    {
+                        licenseKey: 'GPL',
+                        toolbar: {items: TOOLBAR},
+                    },
+                );
+                const root = document.getElementById(id)?.dataset?.cifRoot;
+                log(`✓ ${id} ready  (cif-root: ${root})`);
+            } catch (err) {
+                log(`✗ ${id}: ${err.message}`, 'err');
+                console.error(err);
+            }
+        }
+    }
+
+    function readEditors() {
+        const out = Object.entries(editors)
+            .map(([id, ed]) => `=== ${id} ===\n${ed.getData()}`)
+            .join('\n\n');
+        document.getElementById('output').textContent = out || '(no editors)';
+    }
+
+    initEditors();
+</script>
+
+</body>
+</html>
