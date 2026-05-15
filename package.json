@@ -1,5 +1,6 @@
 {
   "name": "@captjm/ckeditor-five-editor",
+  "homepage": "https://captjm.github.io/ckeditor-five-editor",
   "version": "1.0.0",
   "description": "Custom CKEditor5 build with plugins",
   "main": "dist/editor.js",
